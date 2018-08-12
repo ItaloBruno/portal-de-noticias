@@ -1,5 +1,10 @@
 module.exports = (app) => {
     app.get('/noticias', (req, res) => {
-        res.render('noticias/noticias');
+        var connection    = app.config.dbConnection();
+        var noticiasModel = app.app.models.noticiasModel;
+        
+        noticiasModel.getNoticias(connection, (error, result) => {
+            res.render('noticias/noticias', {noticias: result});
+        });
     });
 };
