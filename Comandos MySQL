@@ -1,24 +1,24 @@
 COMANDOS MYSQL
 
-#Iniciar\parar\reiniciar o mysql
+# Iniciar\parar\reiniciar o mysql
 systemctl start\stop\restart mysql.service
 
-#Entra no Mysql
+# Entra no Mysql
 mysql -u root -p (enter e informe sua senha)
 
-#Mostra todos os bancos criados
+# Mostra todos os bancos criados
 show databases;
 
-#Cria um novo banco
+# Cria um novo banco
 create database (nome do banco);
 
-#Acessar o banco de dados
+# Acessar o banco de dados
 use (nome do banco);
 
-#Mostra todas as tabelas
+# Mostra todas as tabelas
 show tables;
 
-#Cria nova tabela
+# Cria nova tabela
 create table (nome da tabela)
 Exemplo:
         create table noticias( id_noticia int not null primary key auto_increment, 
@@ -26,11 +26,11 @@ Exemplo:
         noticia text, 
         data_criacao timestamp default current_timestamp);
 
-#Inserir registro 
+# Inserir registro 
 insert into (nome da tabela(campos da tabela)values(valores dos campos);
 
-#Mostra todos os registros de uma tabela
+# Mostra todos os registros de uma tabela
 select * from (nome da tabela);
 
-
-
+# Adicionar coluna na tabela
+alter table (nome da tabela) add column (nome do campo) (tipo da informação)
