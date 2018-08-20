@@ -1,5 +1,5 @@
-var app = require('./config/server');
+var application = require('./config/server');
 //================================================
-app.listen(3000, () => {
+application.listen(3000, function(){
     console.log('Servidor rodando com Express na porta 3000');    
 });

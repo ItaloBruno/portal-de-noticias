@@ -7,6 +7,7 @@ var application = express();
 application.set('view engine', 'ejs');
 application.set('views', './app/views');
 
+application.use(express.static('./app/public'));
 application.use(bodyParser.urlencoded({extended: true}));
 application.use(expressValidator());
 
@@ -16,5 +17,6 @@ consign()
     .then('app/models')
     .then('app/controllers')
     .into(application);
+
 
 module.exports = application;
